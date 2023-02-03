@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>https://maxit-solutions.de/</title>
+
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/1.110.0/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m,sap.ushell,sap.collaboration,sap.ui.layout" data-sap-ui-compatVersion="edge"
+        data-sap-ui-resourceroots='{
+            "maxit.solutions.cc": "."
+        }'
+        data-sap-ui-theme="sap_fiori_3" data-sap-ui-frameOptions="allow"></script>
+    <script>
+        sap.ui.require([
+            "sap/ui/core/Core"
+        ], (Core) => Core.attachInit(() => sap.ui.require([
+            "sap/ui/core/mvc/XMLView",
+        ], async (XMLView) => {
+            const view = await XMLView.create({
+                definition: `
+    <mvc:View 
+        xmlns:mvc="sap.ui.core.mvc" 
+        xmlns="sap.m"
+        xmlns:own="maxit.solutions.cc" 
+        height="100%">
+      <App>
+        <Page showHeader="false">
+          <VBox alignItems="Center"
+                justifyContent="Center"
+                height="100%">
+            <own:Datepicker sType="weeks"/>
+          </VBox>
+        </Page>
+      </App>
+    </mvc:View>`,
+            })
+            view.placeAt("content");
+        })))
+    </script>
+
+</head>
+
+<body class="sapUiBody" id="content"></body>
+
+</html>

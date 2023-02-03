@@ -1,0 +1,8 @@
+specVersion: '2.6'
+metadata:
+  name: maxit.solutions.cc
+type: module
+resources:
+  configuration:
+    paths:
+      "/resources/maxit/solutions/cc/": "./" # note the trailing slashes!

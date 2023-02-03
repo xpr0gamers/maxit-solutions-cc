@@ -1,0 +1,17 @@
+{
+  "name": "maxit-solutions-cc",
+  "version": "1.0.0",
+  "description": "https://maxit-solutions.de/ Components",
+  "keywords": [
+    "ui5",
+    "openui5",
+    "sapui5"
+  ],
+  "main": "index.html",
+  "scripts": {
+    "start": "ui5 serve -o /resources/maxit/solutions/cc/index.html"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.14.17"
+  }
+}
